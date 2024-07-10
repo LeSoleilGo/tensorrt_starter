@@ -20,5 +20,26 @@ ncu --set full --section MemoryWorkloadAnalysis_Tables -o profile ./cudaProgramO
 ncu --replay-mode application --app-replay-mode relaxed --set full --section MemoryWorkloadAnalysis_Tables -o ./cudaProgramOut
 
 ```
+```bash
+ncu --list-[optional] # 显示可选指令， 'list-chips', 'list-metrics', 'list-rules', 'list-sections', and 'list-sets'
+ncu --list-sets # 执行后，结果如下：
+
+---------- --------------------------------------------------------------------------- ------- -----------------
+Identifier Sections                                                                    Enabled Estimated Metrics
+---------- --------------------------------------------------------------------------- ------- -----------------
+basic      LaunchStats, Occupancy, SpeedOfLight                                        yes     45
+detailed   ComputeWorkloadAnalysis, LaunchStats, MemoryWorkloadAnalysis, MemoryWorkloa no      193
+           dAnalysis_Chart, Occupancy, SourceCounters, SpeedOfLight, SpeedOfLight_Roof
+           lineChart
+full       ComputeWorkloadAnalysis, InstructionStats, LaunchStats, MemoryWorkloadAnaly no      253
+           sis, MemoryWorkloadAnalysis_Chart, MemoryWorkloadAnalysis_Tables, NumaAffin
+           ity, Nvlink_Tables, Nvlink_Topology, Occupancy, SchedulerStats, SourceCount
+           ers, SpeedOfLight, SpeedOfLight_RooflineChart, WarpStateStats
+nvlink     Nvlink, Nvlink_Tables, Nvlink_Topology                                      no      22
+roofline   SpeedOfLight, SpeedOfLight_HierarchicalDoubleRooflineChart, SpeedOfLight_Hi no      59
+           erarchicalHalfRooflineChart, SpeedOfLight_HierarchicalSingleRooflineChart,
+           SpeedOfLight_HierarchicalTensorRooflineChart, SpeedOfLight_RooflineChart
+
+```
 
 
