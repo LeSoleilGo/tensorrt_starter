@@ -1,4 +1,4 @@
-下载地址：https://developer.nvidia.com/tools-overview/nsight-compute/get-started
+下载地址：https://developer.nvidia.com/gameworksdownload
 ## Nsight System使用
 ```bash
 nsys profile --trace=cuda,nvtx -o nsight_systems_report ./cudaProgramOut
