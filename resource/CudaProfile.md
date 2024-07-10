@@ -8,7 +8,7 @@ nsys profile --trace=cuda,cublas,nvtx,osrt,cudnn  -gpu-metrics-device=0,1,2,3 --
 nsys status -e
 ```
 
-## Nsight compute使用
+## Nsight Compute使用
 
 ```bash
 ncu -o profile ./cudaProgramOut
