@@ -1,11 +1,11 @@
 下载地址：https://developer.nvidia.com/gameworksdownload
 ## Nsight System使用
 ```bash
-nsys profile --trace=cuda,nvtx -o nsight_systems_report ./cudaProgramOut
-nsys profile --trace=cuda,cublas,nvtx  -gpu-metrics-device=0 --stats=false -o nsight_systems_report ./cudaProgramOut
-nsys profile --trace=cuda,cublas,nvtx  -gpu-metrics-device=1 --stats=false -o nsight_systems_report ./cudaProgramOut
-nsys profile --trace=cuda,cublas,nvtx,osrt,cudnn  -gpu-metrics-device=0,1 --stats=false -o nsight_systems_report ./cudaProgramOut
-nsys profile --trace=cuda,cublas,nvtx,osrt,cudnn  -gpu-metrics-device=0,1,2,3 --stats=false -o nsight_systems_report ./cudaProgramOut
+nsys profile --force-overwrite=true --trace=cuda,nvtx -o nsight_systems_report ./cudaProgramOut
+nsys profile --force-overwrite=true --trace=cuda,cublas,nvtx  -gpu-metrics-device=0 --stats=false -o nsight_systems_report ./cudaProgramOut
+nsys profile --force-overwrite=true --trace=cuda,cublas,nvtx  -gpu-metrics-device=1 --stats=false -o nsight_systems_report ./cudaProgramOut
+nsys profile --force-overwrite=true --trace=cuda,cublas,nvtx,osrt,cudnn  -gpu-metrics-device=0,1 --stats=false -o nsight_systems_report ./cudaProgramOut
+nsys profile --force-overwrite=true --trace=cuda,cublas,nvtx,osrt,cudnn  -gpu-metrics-device=0,1,2,3 --stats=false -o nsight_systems_report ./cudaProgramOut
 nsys status -e
 ```
 
